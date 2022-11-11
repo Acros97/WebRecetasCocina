@@ -1,245 +1,242 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recetas de Bia</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+
+  <title>Las Recetas de Bia</title>
 </head>
 <body>
+  <div class="text-gray-600 font-body">
+    <div class="grid md:grid-cols-3 lg:grid-cols-4">
+        <div class="md:col-span-1 md:flex md:justify-end">
+          <nav class="text-right">
+            <div class="flex justify-between items-center">
+              <h1 class="font-bold  p-4 border-b border-gray-100" >
+                <img src="img/cocinando.gif" alt="imagen" width="40px" height="40px" style="display:inline">
+                <a href="/" class="hover:text-gray-700" style="font-family: 'Cookie', cursive; font-size: 35px;">Las Recetas de Bia</a>
+              </h1>
+              <div class="px-4 cursor-pointer md:hidden" id="burger">
+                <svg
+                  class="w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </div>
+            </div>
+            <ul class="text-sm mt-6 hidden md:block" id="menu">
+              <li class="text-gray-700 font-bold py-1">
+                <a
+                  href="#"
+                  class="px-4 flex justify-end border-r-4 border-primary"
+                  ><span>Inicio</span>
+                  <svg
+                    class="w-5 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="py-1">
+                <a href="#" class="px-4 flex justify-end border-r-4 border-white"
+                  ><span>Acerca de</span>
+                  <svg
+                    class="w-5 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li class="py-1">
+                <a href="#" class="px-4 flex justify-end border-r-4 border-white"
+                  ><span>Contacto</span>
+                  <svg
+                    class="w-5 ml-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <main
+          class="bg-gray-100 px-16 py-6 md:col-span-2 lg:col-span-3 min-h-screen"
+        >
+          <div class="flex justify-center md:justify-end">
+           <input type="search" id="txtBuscar" class="md:border-2 " placeholder="  Buscar recetas" style="border-radius: 10px; margin-right: 10px;">
 
-  <!-- #region HEADER CONTENT -->
-    <header>
-      <div class="header-content">
-<div class="header-top " role="banner"></div>
-        <a href="" title="logo">
-          <h1>
-            <img src="" alt="Imagen" width="240" height="62">
-            <span> Las recetas de Bia</span>
-          </h1>
-        </a>
 
- <!-- #region Search recipes sector -->       
-<form class="header-form-search" role ="search" method="get" action="" id="searchRecipes">
-<input type="search" name="txtBuscar" id="query-input" placeholder="Buscar recetas">
-<input type="submit" value="Buscar">
-</form>
-<!-- #endregion -->
-<!-- #endregion -->
+           <input type="submit" class=" btn
+           text-primary
+           border-primary
+           md:border-2
+           hover:text-gray-700
+           transition
+           ease-out
+           duration-500" value="Buscar">   
 
-  <!-- #region Main Menu-->
-<div class="main-Menu">
-  <ul id="menu-principal" class="menu" role="navigation"></ul>
-<li id = "Menu-item-recetasDe" class="menuItemRecetasDe">
-  <a href="#">
-    "Recetas de..."
- 
-  </a>
-  
-  
+           
+          </div>
 
- 
-<ul class="sub-menu">
-  <li id = "Submenu-Item-Postres-Dulces">
-    <a title="Recetas de postres y dulces" href="#">
-      Postres y dulces
-    </a>
-  </li>
-<li id = "Submenu-Item-Pasta">
-  <a title="Recetas con Pastas" href="#">
-    Recetas con pastas
-  </a>
-</li>
+          <div class="">
+            <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">
+              Últimas recetas publicadas
+            </h4>
+            <div class="mt-8 grid lg:grid-cols-3 gap-10">
+              <div class="card hover:shadow-lg">
+                <img
+                  src="https://i.ibb.co/tpCdNcX/stew.jpg"
+                  alt="stew"
+                  class="w-full h-32 sm:h-48 object-cover"
+                />
+                <div class="m-4">
+                  <span class="font-bold">Comida 1</span>
+                  <span class="block text-gray-500 text-sm">Receta de Bianca</span>
+                </div>
+                <div class="badge">
+                  <svg
+                    class="w-5 inline-block"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>25 mins</span>
+                </div>
+              </div>
+              <div class="card hover:shadow-lg">
+                <img
+                  src="https://i.ibb.co/b1DQyfG/noodles.jpg"
+                  alt="noodles"
+                  class="w-full h-32 sm:h-48 object-cover"
+                />
+                <div class="m-4">
+                  <span class="font-bold">Comida 2</span>
+                  <span class="block text-gray-500 text-sm">Receta de Bianca</span>
+                </div>
+                <div class="badge">
+                  <svg
+                    class="w-5 inline-block"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>15 mins</span>
+                </div>
+              </div>
+              <div class="card hover:shadow-lg">
+                <img
+                  src="https://i.ibb.co/ZdP6cKQ/curry.jpg"
+                  alt="curry"
+                  class="w-full h-32 sm:h-48 object-cover"
+                />
+                <div class="m-4">
+                  <span class="font-bold">Comida 3</span>
+                  <span class="block text-gray-500 text-sm">Receta de Bianca</span>
+                </div>
+                <div class="badge">
+                  <svg
+                    class="w-5 inline-block"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                  <span>30 mins</span>
+                </div>
+              </div>
+            </div>
+            <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">
+              Mas populares
+            </h4>
+            <div class="mt-8">
+              <!-- cards -->
+            </div>
+            
+          </div>
+        </main>
+      </div>
+  </div>
 
-<li id="Submenu-Item-Masas"></li>
-  <a title="Recetas con Masas, pan, entre otros" href="#">
-    Recetas con masas, pan, entre otros
-  </a>
-</ul>
-</li>
-
-<li id="Submenu-Item-Carnes"></li>
-  <a title="Recetas con carnes" href="#">
-    Recetas con carne, pollo y otras aves
-  </a>
-</ul>
-</li>
-
-<li id="Submenu-Item-Arroz"></li>
-  <a title="Recetas con arroz" href="#">
-    Recetas con arroz
-  </a>
-</ul>
-</li>
-
-
-
-<li id = "Menu-item-articulosDestacados" class="menuItemDestacados">
-
-
-</li>
-
-</div>
-<div class="header-Separator"></div>
-
-      </div> 
-    </header>
-      <!-- #endregion -->
-
-  <!-- #region Main content -->
-
-    <div class="main-Content">
+  <footer>
+    <div class="footer">
+      <b>Sitio web creado por Daniel Fros. Repositorio en <a href="https://github.com/Acros97" style="text-decoration: underline;">Github. </a> <p id="year">0000</p></b>
       
-<!--
-  https://www.espai.es/blog/2020/11/como-hacer-un-slider-solo-con-html-y-css/#:~:text=Un%20slider%2C%20o%20pase%20de,promocionar%20en%20nuestro%20sitio%20Web.
--->
-
-    <!-- Slider -->
-    <div class="wrapper">
-          <div class="slider" id = "slider">
-              <ul class="slides">
-                  <li class="slide" id = "slide1">
-                    <a href="#">
-                      <p class="caption">Texto de prueba</p>
-                        <img src="photo_here1.jpg" alt="photo 1">
-                    </a>
-                  </li>
-
-                  <li class="slide" id = "slide2">
-                    <a href="#">
-                      <p class="caption">Otro texto de prueba</p>
-                        <img src="photo_here2.jpg" alt="photo 2">
-                    </a>
-                  </li>
-
-              </ul>
-
-              <ul class="slider-controler">
-                <li><a href="#slide1">&bullet;</a></li>
-                <li><a href="#slide2">&bullet;</a></li>
-              </ul>
-  
-          </div>
     </div>
-  <!-- #endregion-->
+  </footer>
 
 
-    <!--#region POSTLIST-->
-    <div id="postlist" class="post" style="padding-top: 1em;;" role="complementary">
-      <div class="postElements">
-          <div class="postMain">
-            <a href="#" rel="bookmark">
-              <img width="230" height="220" src="photo_Here.jpg" alt="" loading="lazy">
-              <h2>Como hacer receta 1 (prueba)</h2>
-            </a>
-              <ul class="recipemeta" style="font-size: 14px; box-sizing: border-box;">
-                  <li>
-                    <span>
-                      <img width="18" height="18" draggable="false" role="img" class="emoji" alt="⭐" src="https://s.w.org/images/core/emoji/14.0.0/svg/2b50.svg" >
-                    </span>
-                    3.9
-                  </li>
-                  <li>
-                    "10 min"
-                  </li>
-                  <li>180UYU/pers.</li>
-              </ul>
+  <script>
 
-          </div>
-
-          <div class="postMain">
-            <a href="#" rel="bookmark">
-              <img width="230" height="220" src="photo_Here2.jpg" alt="" loading="lazy">
-              <h2>Receta fideos con tuco (prueba)</h2>
-            </a>
-              <ul class="recipemeta" style="font-size: 14px; box-sizing: border-box;">
-                  <li>
-                    <span>
-                      <img width="18" height="18" draggable="false" role="img" class="emoji" alt="⭐" src="https://s.w.org/images/core/emoji/14.0.0/svg/2b50.svg" style="font-size: 14px;">
-                    </span>
-                    4.5
-                  </li>
-                  <li>
-                    "15 min"
-                  </li>
-                  <li>90UYU/pers.</li>
-              </ul>
-
-          </div>
-
-          <div class="postMain">
-            <a href="#" rel="bookmark">
-              <img width="230" height="220" src="photo_Here3.jpg" alt="" loading="lazy">
-              <h2>Receta empanadas(prueba)</h2>
-            </a>
-              <ul class="recipemeta">
-                  <li>
-                    <span>
-                      <img width="18" height="18" draggable="false" role="img" class="emoji" alt="⭐" src="https://s.w.org/images/core/emoji/14.0.0/svg/2b50.svg" style="font-size: 14px;">
-                    </span>
-                    4.7
-                  </li>
-                  <li>
-                    "30 min"
-                  </li>
-                  <li>130UYU/pers.</li>
-              </ul>
-
-          </div>
-
-          <div class="postMain">
-            <a href="#" rel="bookmark">
-              <img width="230" height="220" src="photo_Here4.jpg" alt="" loading="lazy" style="font-size: 14px;">
-              <h2>Receta milanesas(prueba)</h2>
-            </a>
-              <ul class="recipemeta">
-                  <li>
-                    <span>
-                      <img width="18" height="18" draggable="false" role="img" class="emoji" alt="⭐" src="https://s.w.org/images/core/emoji/14.0.0/svg/2b50.svg">
-                    </span>
-                    4.7
-                  </li>
-                  <li>
-                    "40 min"
-                  </li>
-                  <li>135UYU/pers.</li>
-              </ul>
-
-          </div>
-
-          
-      </div>
-    </div>
-
-
-    <!--#endregion -->
-
-    <!--#region NEWSLETTER -->
-    <div class="newsletter">
-      <div class="sigup_scroll">
-        <p> Recibe emails con las nuevas recetas y recomendaciones de 'Las Recetas de Bia'</p>
-        <div class="signupBoxButton"><a href="#" class="buttonlink">Suscribete</a></div>
-      </div>
-    </div>
-
-
-    <!--#endregion-->
-  </div>
-    <!-- #endregion -->
-
-<footer>
-  <div id="closePage" role="contentinfo">
-    <p>2022 Las Recetas de Bia</p>
-    <br>
-    " Diseñado por Daniel Fros"
-    <a href="https://github.com/Acros97/WebRecetasCocina">Repositorio en Github</a>
-  </div>
-</footer>
-
-    
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
+
